@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #09090B;
+  --color-surface: #18181B;
+  --color-edge: #27272A;
+  --color-pulse: #DFB15B;
+
+  --font-display: "PP Neue Montreal", "Inter", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* Custom keyframes for the signal trace, gated behind reduced-motion below */
+@keyframes signal {
+  0%   { stroke-dashoffset: 240; }
+  100% { stroke-dashoffset: 0; }
+}
+
+/* Base resets and Lenis styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Ensure focus-visible works everywhere cleanly */
+*:focus-visible {
+  outline: none;
+}
+
+body {
+  background-color: #09090B;
+  color: #D4D4D8;
+  overflow-x: hidden;
+}

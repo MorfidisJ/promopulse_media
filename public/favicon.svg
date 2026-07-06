@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <!-- Warm Champagne Beige/Gold Brand Background matching photo -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EAD6AA" />
+      <stop offset="50%" stop-color="#E3CBA0" />
+      <stop offset="100%" stop-color="#DCBE8D" />
+    </linearGradient>
+
+    <!-- Mask for black foreground capsule -->
+    <mask id="notchMask">
+      <rect width="100" height="100" fill="white" />
+      <path d="M43 12v22M57 12v22" stroke="black" stroke-width="5.5" stroke-linecap="round" />
+    </mask>
+
+    <!-- Mask for white background halo capsule -->
+    <mask id="haloMask">
+      <rect width="100" height="100" fill="white" />
+      <path d="M43 11v23M57 11v23" stroke="black" stroke-width="3.5" stroke-linecap="round" />
+    </mask>
+  </defs>
+
+  <!-- Warm Brand Background Rounded Square -->
+  <rect width="100" height="100" rx="22" fill="url(#bgGrad)" />
+
+  <!-- --- LAYER 1: WHITE HALO / OUTLINE (Matches logo contrast border) --- -->
+  <rect
+    x="32.2"
+    y="14.2"
+    width="35.6"
+    height="55.6"
+    rx="17.8"
+    fill="#FFFFFF"
+    mask="url(#haloMask)"
+  />
+  <path
+    d="M23 44v14a27 27 0 0 0 54 0v-14"
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="11"
+    stroke-linecap="round"
+  />
+  <path
+    d="M50 73v12"
+    stroke="#FFFFFF"
+    stroke-width="11.5"
+    stroke-linecap="round"
+  />
+  <path
+    d="M33 87h34"
+    stroke="#FFFFFF"
+    stroke-width="11.5"
+    stroke-linecap="round"
+  />
+
+  <!-- --- LAYER 2: SOLID DARK / BLACK FOREGROUND (Matches 1-to-1 mic stand) --- -->
+  <rect
+    x="34"
+    y="16"
+    width="32"
+    height="52"
+    rx="16"
+    fill="#09090B"
+    mask="url(#notchMask)"
+  />
+  <path
+    d="M23 44v14a27 27 0 0 0 54 0v-14"
+    fill="none"
+    stroke="#09090B"
+    stroke-width="7"
+    stroke-linecap="round"
+  />
+  <path
+    d="M50 73v12"
+    stroke="#09090B"
+    stroke-width="7.5"
+    stroke-linecap="round"
+  />
+  <path
+    d="M33 87h34"
+    stroke="#09090B"
+    stroke-width="7.5"
+    stroke-linecap="round"
+  />
+</svg>
